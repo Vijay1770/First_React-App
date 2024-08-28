@@ -7,15 +7,15 @@ import "./App.css";
 
 function App() {
   return (
-    <center >
+    <div class="todo-container">
       <AppName></AppName>
       <AddTodo></AddTodo>
-      <div class="container text-center">
+      <div class="my-items">
         <TodoItem1></TodoItem1>
         <TodoItem2></TodoItem2>
+      </div>
         <AddTodo></AddTodo>
       </div>
-    </center>
   );
 }
 export default App;
