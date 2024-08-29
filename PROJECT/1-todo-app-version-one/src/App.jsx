@@ -14,8 +14,8 @@ function App() {
         <TodoItem1></TodoItem1>
         <TodoItem2></TodoItem2>
       </div>
-        <AddTodo></AddTodo>
-      </div>
+      <AddTodo></AddTodo>
+    </div>
   );
 }
 export default App;

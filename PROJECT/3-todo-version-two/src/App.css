@@ -1,0 +1,31 @@
+
+.todo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.my-items{
+  width: 100%;
+  /*usen this margin when you want to show todo app in full screen ... */
+  /* margin-left: 78px; */
+}
+.todo-container h1
+{
+  
+  font-weight: 700;
+  font-size: 45px;
+  margin: 10px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+input{
+  width: 100%;
+}
+.my-row{
+  margin: 15px 7px;
+}
+.my-btn{
+  min-width: 90px;
+}
