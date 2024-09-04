@@ -7,21 +7,19 @@ function AddTodo({ onNewItem }) {
   const handleNameChange = (event) => {
     setTodoName(event.target.value);
   };
-
   const handleDateChange = (event) => {
     setDueDate(event.target.value);
   };
-
   const handleAddButtonClicked = () => {
     onNewItem(todoName, dueDate);
     setDueDate("");
     setTodoName("");
   };
-
   return (
-    <div className="container text-center">
-      <div className="row kg-row">
-        <div className="col-6">
+    //Todo addtion row or first row ...
+    <div class="container text-center">
+      <div class="row my-row">
+        <div class="col-6">
           <input
             type="text"
             placeholder="Enter Todo Here"
@@ -29,21 +27,20 @@ function AddTodo({ onNewItem }) {
             onChange={handleNameChange}
           />
         </div>
-        <div className="col-4">
+        <div class="col-4">
           <input type="date" value={dueDate} onChange={handleDateChange} />
         </div>
-        <div className="col-2">
+        <div class="col-2">
           <button
             type="button"
-            className="btn btn-success kg-button"
+            class="btn btn-success my-btn"
             onClick={handleAddButtonClicked}
           >
-            Add
+            ADD
           </button>
         </div>
       </div>
     </div>
   );
 }
-
 export default AddTodo;

@@ -6,7 +6,7 @@ import TodoItem2 from "./components/TodoItem2";
 import "./App.css";
 
 function App() {
-  return (
+  return ( 
     <div class="todo-container">
       <AppName></AppName>
       <AddTodo></AddTodo>
