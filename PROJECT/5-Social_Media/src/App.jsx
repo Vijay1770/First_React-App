@@ -8,25 +8,28 @@ import PostList from "./components/PostList";
 import PostListProvider from "./store/post-list-store";
 import { useState } from "react";
 function App() {
-  const [selectedTab, setSelectedTab] = useState("Create Post");
+  //Destructring for send props to sideBar for chage the color of buttons onClick ....
+  const [selectedTab, setSelectedTab] = useState("Home");
 
   return (
-   <PostListProvider>
-    <div className="app-container">
-      <SideBar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></SideBar>
-      <div className="content">
-        <Header></Header>
-        {/* We are using Rendring for showing what we show first(refresh...) */}
-        {selectedTab === "Home" ? (
-          <PostList></PostList>
-        ) : (
-          <CreatePost></CreatePost>
-        )}
-        <Footer></Footer>
+    <PostListProvider>
+      <div className="app-container">
+        <SideBar
+          selectedTab={selectedTab}
+          setSelectedTab={setSelectedTab}
+        ></SideBar>
+        <div className="content">
+          <Header></Header>
+          {/* We are using Rendring for showing what we show when we click on home button and Create post button...(refresh...) */}
+          {selectedTab === "Home" ? (
+            <PostList></PostList>
+          ) : (
+            <CreatePost></CreatePost>
+          )}
+          <Footer></Footer>
+        </div>
       </div>
-    </div>
     </PostListProvider>
   );
- 
 }
 export default App;

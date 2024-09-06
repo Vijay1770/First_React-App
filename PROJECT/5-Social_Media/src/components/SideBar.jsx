@@ -2,13 +2,13 @@ const SideBar = ({ selectedTab, setSelectedTab }) => {
   return (
     <div
       class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
-      style={{ width: "280px" }}
+      style={{ width: "200px" }}
     >
       <a
         href="/"
         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
       >
-        <svg class="bi pe-none me-2" width="40" height="32">
+        <svg class="bi pe-none me-2" width="30" height="32">
           <use xlink:Href="#bootstrap"></use>
         </svg>
         <span class="fs-4">Sidebar</span>
@@ -18,7 +18,6 @@ const SideBar = ({ selectedTab, setSelectedTab }) => {
         <li
           classname="nav-item"
           onClick={() => {
-            console.log("Clicked P...");
             setSelectedTab("Home");
           }}
         >
@@ -37,8 +36,6 @@ const SideBar = ({ selectedTab, setSelectedTab }) => {
         </li>
         <li
           onClick={() => {
-            console.log("Clicked cp");
-
             setSelectedTab("Create Post");
           }}
         >
@@ -72,31 +69,6 @@ const SideBar = ({ selectedTab, setSelectedTab }) => {
           />
           <strong>mdo</strong>
         </a>
-        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-          <li>
-            <a class="dropdown-item" href="#">
-              New project...
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">
-              Profile
-            </a>
-          </li>
-          <li>
-            <hr class="dropdown-divider" />
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">
-              Sign out
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   );
