@@ -15,7 +15,7 @@ const CreatePost = () => {
     const userId = userIdElement.current.value;
     const postTitle = postTitleElement.current.value;
     const postBody = postBodyElement.current.value;
-    const reactions = Number(reactionsElement.current.value.likes);
+    const reactions = Number(reactionsElement.current.value);
   
     // const reactions = parseInt(reactionsElement.current.value, 10) || 0; // Convert to number
     const tags = tagsElement.current.value.split(" ");
