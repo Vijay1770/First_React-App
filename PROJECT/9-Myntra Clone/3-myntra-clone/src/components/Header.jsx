@@ -3,7 +3,12 @@ import { IoMdPerson } from "react-icons/io";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 import { IoBagAdd } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux";
 const Header = () => {
+
+const bag = useSelector((store)=>store.bag); //This help to got the data that how many items are present into the bag and update the no. on bag logo...
+
+
   return (
     <header>
       <div className="logo_container">
@@ -46,7 +51,7 @@ const Header = () => {
         <Link className="action_container" to="/bag">
           <IoBagAdd></IoBagAdd>
           <span className="action_name">Bag</span>
-          <span className="bag-item-count">0</span>
+          <span className="bag-item-count">{bag.length}</span>
         </Link>
       </div>
     </header>

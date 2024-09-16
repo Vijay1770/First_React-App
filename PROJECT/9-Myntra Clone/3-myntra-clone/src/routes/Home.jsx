@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const items = useSelector((store) => store.items);
-console.log("Gout items",items);
 
   return (
     <main>
@@ -16,4 +15,3 @@ console.log("Gout items",items);
   );
 };
 export default Home;
-   

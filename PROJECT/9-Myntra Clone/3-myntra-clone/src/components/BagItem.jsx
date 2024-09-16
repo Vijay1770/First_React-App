@@ -1,7 +1,14 @@
 import { FcDislike } from "react-icons/fc";
+import { useDispatch } from "react-redux";
+import { bagActions } from "../store/bagSlice";
 
-const BagItem=({item})=>
-{
+const BagItem=({item})=>{
+const dispatch = useDispatch();
+
+const handleRemoveItem =()=>{
+  dispatch(bagActions.removeFromBag(item.id));
+}
+
 return (
   <div className="bag-item-container">
     <div className="item-left-part">
@@ -24,8 +31,7 @@ return (
       </div>
     </div>
 
-    <div className="remove-from-cart" onClick={()=>console.log("Item Removed")
-    }><FcDislike></FcDislike></div>
+    <div className="remove-from-cart" onClick={handleRemoveItem}><FcDislike></FcDislike></div>
   </div>
 )
 }
